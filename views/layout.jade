@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src='/socket.io/socket.io.js')
+
+    script() var socket = io.connect('http://localhost:3000');socket.on('connect', function(data){socket.emit('remote');});
+  body
+    block content
